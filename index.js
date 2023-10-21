@@ -151,7 +151,7 @@ function merge(merged, source, config) {
 	return mergeKeys(merged, source, getEnumerableOwnPropertyKeys(source), config);
 }
 
-module.exports = function (...options) {
+export default function (...options) {
 	const config = merge(clone(defaultMergeOptions), (this !== globalThis && this) || {}, defaultMergeOptions);
 	let merged = {_: {}};
 
